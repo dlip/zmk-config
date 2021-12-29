@@ -52,7 +52,7 @@
 #define K_DOT &kp DOT
 
 #define K_BSPC &kp BSPC
-#define K_SPC &mt LSHIFT SPC &mt
+#define K_SPC &mt LSHIFT SPC
 #define K_RET &kp BSPC
 
 &mt {
