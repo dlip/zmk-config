@@ -8,52 +8,64 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+// DEFAULT LAYER
+
 #define L_DEF 0
+
+#define DEF_Q &kp Q
+#define DEF_W &kp W
+#define DEF_F &kp F
+#define DEF_P &kp P
+#define DEF_B &kp B
+                        
+#define DEF_J &kp J
+#define DEF_L &kp L
+#define DEF_U &kp U
+#define DEF_Y &kp Y
+#define DEF_SEMI &kp SEMI
+
+#define DEF_A &mt LGUI A 
+#define DEF_R &mt LALT R 
+#define DEF_S &kp S
+#define DEF_T &mt LCTRL T 
+#define DEF_G &kp G
+        
+#define DEF_M &kp M
+#define DEF_N &mt RCTL N 
+#define DEF_E &kp E
+#define DEF_I &mt LALT I 
+#define DEF_O &mt RGUI O
+        
+#define DEF_Z &kp Z
+#define DEF_X &kp X
+#define DEF_C &kp C
+#define DEF_D &kp D
+#define DEF_V &kp V
+                        
+#define DEF_K &kp K
+#define DEF_H &kp H
+#define DEF_C &kp C
+#define DEF_COMA &kp COMMA
+#define DEF_DOT &kp DOT
+
+#define DEF_BSPC &kp BSPC
+#define DEF_SPC &mt LSHIFT SPC
+#define DEF_RET &kp RET
+
+// NAVIGATION LAYER
 #define L_NAV 1
+
+// NUMBER LAYER
 #define L_NUM 2
+
+// MEDIA LAYER
 #define L_MED 3
+
+// FUNCTION LAYER
 #define L_FUN 4
+
+// GAMING LAYER
 #define L_GAM 5
-
-#define K_Q &kp Q
-#define K_W &kp W
-#define K_F &kp F
-#define K_P &kp P
-#define K_B &kp B
-                        
-#define K_J &kp J
-#define K_L &kp L
-#define K_U &kp U
-#define K_Y &kp Y
-#define K_SEMI &kp SEMI
-
-#define K_A &mt LGUI A 
-#define K_R &mt LALT R 
-#define K_S &kp S
-#define K_T &mt LCTRL T 
-#define K_G &kp G
-        
-#define K_M &kp M
-#define K_N &mt RCTL N 
-#define K_E &kp E
-#define K_I &mt LALT I 
-#define K_O &mt RGUI O
-        
-#define K_Z &kp Z
-#define K_X &kp X
-#define K_C &kp C
-#define K_D &kp D
-#define K_V &kp V
-                        
-#define K_K &kp K
-#define K_H &kp H
-#define K_C &kp C
-#define K_COMA &kp COMMA
-#define K_DOT &kp DOT
-
-#define K_BSPC &kp BSPC
-#define K_SPC &mt LSHIFT SPC
-#define K_RET &kp BSPC
 
 &mt {
   //  flavor = "tap-preferred";
@@ -67,10 +79,10 @@
 
     def_layer {
       bindings = <
-        K_Q    K_W    K_F    K_P    K_B       K_J    K_L    K_U    K_Y    K_SEMI
-        K_A    K_R    K_S    K_T    K_G       K_M    K_N    K_E    K_I    K_O
-        K_Z    K_X    K_C    K_D    K_V       K_K    K_H    K_C    K_COMA K_DOT
-                             K_BSPC K_SPC     K_SPC  K_RET
+        DEF_Q    DEF_W    DEF_F    DEF_P    DEF_B          DEF_J    DEF_L    DEF_U    DEF_Y    DEF_SEMI
+        DEF_A    DEF_R    DEF_S    DEF_T    DEF_G          DEF_M    DEF_N    DEF_E    DEF_I    DEF_O
+        DEF_Z    DEF_X    DEF_C    DEF_D    DEF_V          DEF_K    DEF_H    DEF_C    DEF_COMA DEF_DOT
+                                   DEF_BSPC DEF_SPC        DEF_SPC  DEF_RET
       >;
     };
 
@@ -96,27 +108,27 @@
     // med_layer {
     //   bindings = <&kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &
     //               trans &trans &trans &trans &trans &kp F1 &kp F2 &
-    //              kp F3 &kp F4 &kp F5 &trans &kp PG_UP &kp K_VOL_UP &
-    //               kp K_MUTE &trans &bt BT_CLR &bt BT_NXT &bt BT_PRV &
-    //               kp F6 &kp F7 &trans &kp PG_DN &kp K_VOL_DN &trans &
+    //              kp F3 &kp F4 &kp F5 &trans &kp PG_UP &kp DEF_VOL_UP &
+    //               kp DEF_MUTE &trans &bt BT_CLR &bt BT_NXT &bt BT_PRV &
+    //               kp F6 &kp F7 &trans &kp PG_DN &kp DEF_VOL_DN &trans &
     //               trans &trans &trans &trans &trans>;
     // };
     //
     // fun_layer {
     //   bindings = <&kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &
     //               trans &trans &trans &trans &trans &kp F1 &kp F2 &
-    //               kp F3 &kp F4 &kp F5 &trans &kp PG_UP &kp K_VOL_UP &
-    //               kp K_MUTE &trans &bt BT_CLR &bt BT_NXT &bt BT_PRV &
-    //               kp F6 &kp F7 &trans &kp PG_DN &kp K_VOL_DN &trans &
+    //               kp F3 &kp F4 &kp F5 &trans &kp PG_UP &kp DEF_VOL_UP &
+    //               kp DEF_MUTE &trans &bt BT_CLR &bt BT_NXT &bt BT_PRV &
+    //               kp F6 &kp F7 &trans &kp PG_DN &kp DEF_VOL_DN &trans &
     //               trans &trans &trans &trans &trans>;
     // };
     //
     // gam_layer {
     //   bindings = <&kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &
     //               trans &trans &trans &trans &trans &kp F1 &kp F2 &
-    //               kp F3 &kp F4 &kp F5 &trans &kp PG_UP &kp K_VOL_UP &
-    //               kp K_MUTE &trans &bt BT_CLR &bt BT_NXT &bt BT_PRV &
-    //               kp F6 &kp F7 &trans &kp PG_DN &kp K_VOL_DN &trans &
+    //               kp F3 &kp F4 &kp F5 &trans &kp PG_UP &kp DEF_VOL_UP &
+    //               kp DEF_MUTE &trans &bt BT_CLR &bt BT_NXT &bt BT_PRV &
+    //               kp F6 &kp F7 &trans &kp PG_DN &kp DEF_VOL_DN &trans &
     //               trans &trans &trans &trans &trans>;
     // };
   };
