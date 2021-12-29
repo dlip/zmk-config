@@ -22,23 +22,11 @@
 #define DEF_P &kp P
 #define DEF_B &kp B
                         
-#define DEF_J &kp J
-#define DEF_L &kp L
-#define DEF_U &kp U
-#define DEF_Y &kp Y
-#define DEF_SEMI &kp SEMI
-
 #define DEF_A &mt LGUI A 
 #define DEF_R &mt LALT R 
 #define DEF_S &kp S
 #define DEF_T &mt LCTRL T 
 #define DEF_G &kp G
-        
-#define DEF_M &kp M
-#define DEF_N &mt RCTL N 
-#define DEF_E &lt L_MED E
-#define DEF_I &mt LALT I 
-#define DEF_O &mt RGUI O
         
 #define DEF_Z &kp Z
 #define DEF_X &kp X
@@ -46,11 +34,25 @@
 #define DEF_D &kp D
 #define DEF_V &kp V
                         
+
+#define DEF_J &kp J
+#define DEF_L &kp L
+#define DEF_U &kp U
+#define DEF_Y &kp Y
+#define DEF_SEMI &kp SEMI
+
 #define DEF_K &kp K
 #define DEF_H &kp H
 #define DEF_C &kp C
 #define DEF_COMA &kp COMMA
 #define DEF_DOT &kp DOT
+
+#define DEF_M &kp M
+#define DEF_N &mt RCTL N 
+#define DEF_E &lt L_MED E
+#define DEF_I &mt LALT I 
+#define DEF_O &mt RGUI O
+
 
 #define DEF_BSPC &kp BSPC
 #define DEF_SPC &mt LSHIFT SPC
@@ -63,17 +65,43 @@
 #define NAV_HOME &kp HOME
 #define NAV_UP &kp UP
 #define NAV_END &kp END
+
 #define NAV_ESC &kp ESC
 #define NAV_LEFT &kp LEFT
 #define NAV_DOWN &kp DOWN
 #define NAV_RGHT &kp RIGHT
+
 #define NAV_GRV &kp GRAVE
 #define NAV_PGUP &kp PG_UP
 #define NAV_DEL &kp DEL
 #define NAV_PGDN &kp PG_DN
 
+
+#define NAV_TAB &kp TAB
+
 // NUMBER LAYER
 #define L_NUM 2
+
+#define NUM_LBKT &kp LBKT
+#define NUM_7 &kp N7 
+#define NUM_8 &kp N8
+#define NUM_9 &kp N9
+#define NUM_RBKT &kp RBKT 
+
+#define NUM_EQUL &kp EQUAL
+#define NUM_4 &kp N4
+#define NUM_5 &kp N5
+#define NUM_6 &kp N6
+#define NUM_BSLH &kp BSLH
+
+#define NUM_MIN &kp MINUS
+#define NUM_1 &kp N1
+#define NUM_2 &kp N2
+#define NUM_3 &kp N3
+#define NUM_FSLH &kp FSLH
+
+
+#define NUM_0 &kp N0
 
 // MEDIA LAYER
 #define L_MED 3
@@ -109,7 +137,16 @@
         NAV_PRNT NAV_HOME NAV_UP   NAV_END  GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
         NAV_ESC  NAV_LEFT NAV_DOWN NAV_RGHT GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
         NAV_GRV  NAV_PGUP NAV_DEL  NAV_PGDN GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
-                                   GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
+                                   NAV_TAB  GEN_TRAN       GEN_TRAN GEN_TRAN
+      >;
+    };
+
+    number_layer {
+      bindings = <
+        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_LBKT NUM_7    NUM_8    NUM_9    NUM_RBKT
+        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_EQUL NUM_4    NUM_5    NUM_6    NUM_BSLH
+        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_MIN  NUM_1    NUM_2    NUM_3    NUM_FSLH
+                                   GEN_TRAN GEN_TRAN       GEN_TRAN NUM_0
       >;
     };
 
