@@ -36,7 +36,7 @@
         
 #define DEF_M &kp M
 #define DEF_N &mt RCTL N 
-#define DEF_E &kp E
+#define DEF_E &lt L_MED E
 #define DEF_I &mt LALT I 
 #define DEF_O &mt RGUI O
         
@@ -58,6 +58,19 @@
 
 // NAVIGATION LAYER
 #define L_NAV 1
+
+#define NAV_PRNT &kp PSCRN
+#define NAV_HOME &kp HOME
+#define NAV_UP &kp UP
+#define NAV_END &kp END
+#define NAV_ESC &kp ESC
+#define NAV_LEFT &kp LEFT
+#define NAV_DOWN &kp DOWN
+#define NAV_RGHT &kp RIGHT
+#define NAV_GRV &kp GRAVE
+#define NAV_PGUP &kp PG_UP
+#define NAV_DEL &kp DEL
+#define NAV_PGDN &kp PG_DN
 
 // NUMBER LAYER
 #define L_NUM 2
@@ -90,14 +103,25 @@
       >;
     };
 
-    empty_layer {
+
+    navigation_layer {
       bindings = <
-        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
-        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
-        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+        NAV_PRNT NAV_HOME NAV_UP   NAV_END  GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+        NAV_ESC  NAV_LEFT NAV_DOWN NAV_RGHT GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+        NAV_GRV  NAV_PGUP NAV_DEL  NAV_PGDN GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
+
+    // empty_layer {
+    //   bindings = <
+    //     GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+    //     GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+    //     GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+    //                                GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
+    //   >;
+    // };
+
     // nav_layer {
     //   bindings =
     //       <&kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6 &
