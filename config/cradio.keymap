@@ -15,6 +15,8 @@
 #define L_FUN 4
 #define L_GAM 5
 
+#define K_BSPC &kp BSPC
+
 &mt {
   //  flavor = "tap-preferred";
   tapping_term_ms = <200>;
@@ -30,7 +32,7 @@
         &kp Q &kp W &kp F &kp P &kp B                        &kp J &kp U &kp U &kp O &kp SEMI 
         &mt LGUI A &mt LALT R &kp S &mt LCTRL T &kp G        &kp M &mt RCTL N &kp E &mt LALT I &mt RGUI O
         &kp Z &kp X &kp C &kp D &kp V                        &kp K &kp H &kp CMMA &kp DOT &kp QUOT
-                  &kp BSPC &mt LSHIFT SPC &mt                LSHIFT SPC &kp RET
+                  K_BSPC &mt LSHIFT SPC &mt                LSHIFT SPC &kp RET
       >;
     };
 
