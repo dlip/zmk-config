@@ -15,7 +15,45 @@
 #define L_FUN 4
 #define L_GAM 5
 
+#define K_Q &kp Q
+#define K_W &kp W
+#define K_F &kp F
+#define K_P &kp P
+#define K_B &kp B
+                        
+#define K_J &kp J
+#define K_L &kp L
+#define K_U &kp U
+#define K_Y &kp Y
+#define K_SEMI &kp SEMI
+
+#define K_A &mt LGUI A 
+#define K_R &mt LALT R 
+#define K_S &kp S
+#define K_T &mt LCTRL T 
+#define K_G &kp G
+        
+#define K_M &kp M
+#define K_N &mt RCTL N 
+#define K_E &kp E
+#define K_I &mt LALT I 
+#define K_O &mt RGUI O
+        
+#define K_Z &kp Z
+#define K_X &kp X
+#define K_C &kp C
+#define K_D &kp D
+#define K_V &kp V
+                        
+#define K_K &kp K
+#define K_H &kp H
+#define K_C &kp C
+#define K_COMA &kp COMMA
+#define K_DOT &kp DOT
+
 #define K_BSPC &kp BSPC
+#define K_SPC &mt LSHIFT SPC &mt
+#define K_RET &kp BSPC
 
 &mt {
   //  flavor = "tap-preferred";
@@ -29,10 +67,10 @@
 
     def_layer {
       bindings = <
-        &kp Q &kp W &kp F &kp P &kp B                        &kp J &kp U &kp U &kp O &kp SEMI 
-        &mt LGUI A &mt LALT R &kp S &mt LCTRL T &kp G        &kp M &mt RCTL N &kp E &mt LALT I &mt RGUI O
-        &kp Z &kp X &kp C &kp D &kp V                        &kp K &kp H &kp CMMA &kp DOT &kp QUOT
-                  K_BSPC &mt LSHIFT SPC &mt                LSHIFT SPC &kp RET
+        K_Q    K_W    K_F    K_P    K_B       K_J    K_L    K_U    K_Y    K_SEMI
+        K_A    K_R    K_S    K_T    K_G       K_M    K_N    K_E    K_I    K_O
+        K_Z    K_X    K_C    K_D    K_V       K_K    K_H    K_C    K_COMA K_DOT
+                             K_BSPC K_SPC     K_SPC  K_RET
       >;
     };
 
