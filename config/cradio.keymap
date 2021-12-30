@@ -106,6 +106,16 @@
 // MEDIA LAYER
 #define L_MED 3
 
+#define MED_BRID &kp C_BRI_DN
+#define MED_VOLU &kp C_VOL_UP
+#define MED_BRIU &kp C_BRI_UP
+#define MED_PREV &kp C_PREV
+#define MED_PLAY &kp K_PP
+#define MED_NEXT &kp C_NEXT
+#define MED_MUTE &kp C_MUTE
+#define MED_VOLD &kp C_VOL_DN
+#define MED_STOP &kp C_STOP
+
 // FUNCTION LAYER
 #define L_FUN 4
 
@@ -147,6 +157,15 @@
         GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_EQUL NUM_4    NUM_5    NUM_6    NUM_BSLH
         GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_MIN  NUM_1    NUM_2    NUM_3    NUM_FSLH
                                    GEN_TRAN GEN_TRAN       GEN_TRAN NUM_0
+      >;
+    };
+
+    media_layer {
+      bindings = <
+        GEN_NONE MED_BRID MED_VOLU MED_BRIU GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+        GEN_NONE MED_PREV MED_PLAY MED_NEXT GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+        GEN_NONE MED_MUTE MED_VOLD MED_STOP GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+                                   GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
 
