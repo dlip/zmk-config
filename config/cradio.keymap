@@ -119,6 +119,19 @@
 // FUNCTION LAYER
 #define L_FUN 4
 
+#define FUN_F7 &kp F7
+#define FUN_F8 &kp F8
+#define FUN_F9 &kp F9
+#define FUN_F10 &kp F10
+#define FUN_F4 &kp F4
+#define FUN_F5 &kp F5
+#define FUN_F6 &kp F6
+#define FUN_F11 &kp F11
+#define FUN_F1 &kp F1
+#define FUN_F2 &kp F2
+#define FUN_F3 &kp F3
+#define FUN_F13 &kp F12
+
 // GAMING LAYER
 #define L_GAM 5
 
@@ -140,7 +153,6 @@
                                    DEF_BSPC DEF_SPC        DEF_SPC  DEF_RET
       >;
     };
-
 
     navigation_layer {
       bindings = <
@@ -165,6 +177,15 @@
         GEN_NONE MED_BRID MED_VOLU MED_BRIU GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
         GEN_NONE MED_PREV MED_PLAY MED_NEXT GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
         GEN_NONE MED_MUTE MED_VOLD MED_STOP GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+                                   GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
+      >;
+    };
+
+    function_layer {
+      bindings = <
+        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE FUN_F7   FUN_F8   FUN_F9   FUN_F10
+        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE FUN_F4   FUN_F5   FUN_F6   FUN_F11
+        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE FUN_F1   FUN_F2   FUN_F3   FUN_F13
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
