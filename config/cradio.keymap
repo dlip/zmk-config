@@ -18,13 +18,13 @@
 
 #define DEF_Q &kp Q
 #define DEF_W &kp W
-#define DEF_F &kp F
+#define DEF_F &lt L_FUN F
 #define DEF_P &kp P
 #define DEF_B &kp B
                         
 #define DEF_A &mt LGUI A 
 #define DEF_R &mt LALT R 
-#define DEF_S &kp S
+#define DEF_S &lt L_NUM S
 #define DEF_T &mt LCTRL T 
 #define DEF_G &kp G
         
@@ -37,7 +37,7 @@
 
 #define DEF_J &kp J
 #define DEF_L &kp L
-#define DEF_U &kp U
+#define DEF_U &lt L_MED U
 #define DEF_Y &kp Y
 #define DEF_SEMI &kp SEMI
 
@@ -126,6 +126,7 @@
 #define FUN_F9 &kp F9
 #define FUN_F10 &kp F10
 
+#define FUN_GAME &to L_GAM
 #define FUN_F4 &kp F4
 #define FUN_F5 &kp F5
 #define FUN_F6 &kp F6
@@ -160,6 +161,7 @@
 
 #define GAM_UP &kp UP
 
+#define GAM_DEF &to L_DEF
 #define GAM_LEFT &kp LEFT
 #define GAM_DOWN &kp DOWN
 #define GAM_RGHT &kp RIGHT
@@ -217,7 +219,7 @@
     function_layer {
       bindings = <
         GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE FUN_F7   FUN_F8   FUN_F9   FUN_F10
-        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE FUN_F4   FUN_F5   FUN_F6   FUN_F11
+        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       FUN_GAME FUN_F4   FUN_F5   FUN_F6   FUN_F11
         GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE FUN_F1   FUN_F2   FUN_F3   FUN_F13
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
@@ -226,7 +228,7 @@
     gaming_layer {
       bindings = <
         GAM_TAB  GAM_Q    GAM_W    GAM_E    GAM_R       GEN_NONE GEN_NONE GAM_UP   GEN_NONE GEN_NONE
-        GAM_LSFT GAM_A    GAM_S    GAM_D    GAM_F       GEN_NONE GAM_LEFT GAM_DOWN GAM_RGHT GEN_NONE
+        GAM_LSFT GAM_A    GAM_S    GAM_D    GAM_F       GAM_DEF  GAM_LEFT GAM_DOWN GAM_RGHT GEN_NONE
         GAM_LCTL GAM_Z    GAM_X    GAM_C    GAM_V       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
                                    GAM_ESC  GAM_SPC     GEN_TRAN GEN_TRAN
       >;
