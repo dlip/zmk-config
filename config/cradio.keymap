@@ -119,6 +119,7 @@
 // FUNCTION LAYER
 #define L_FUN 4
 
+#define FUN_RES &reset
 #define FUN_F7 &kp F7
 #define FUN_F8 &kp F8
 #define FUN_F9 &kp F9
@@ -130,6 +131,7 @@
 #define FUN_F6 &kp F6
 #define FUN_F11 &kp F11
 
+#define FUN_BOOT &bootloader
 #define FUN_F1 &kp F1
 #define FUN_F2 &kp F2
 #define FUN_F3 &kp F3
@@ -228,9 +230,9 @@
 
     function_layer {
       bindings = <
-        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE FUN_F7   FUN_F8   FUN_F9   FUN_F10
+        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       FUN_RES  FUN_F7   FUN_F8   FUN_F9   FUN_F10
         GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       FUN_GAME FUN_F4   FUN_F5   FUN_F6   FUN_F11
-        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       GEN_NONE FUN_F1   FUN_F2   FUN_F3   FUN_F13
+        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       FEN_BOOT FUN_F1   FUN_F2   FUN_F3   FUN_F13
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
