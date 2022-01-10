@@ -22,10 +22,10 @@
 #define DEF_P &kp P
 #define DEF_B &kp B
                         
-#define DEF_A &mt LGUI A 
-#define DEF_R &mt LALT R 
+#define DEF_A &lht LGUI A 
+#define DEF_R &lht LALT R 
 #define DEF_S &lt L_NUM S
-#define DEF_T &mt LCTRL T 
+#define DEF_T &lht LCTRL T 
 #define DEF_G &kp G
         
 #define DEF_Z &kp Z
@@ -54,9 +54,8 @@
 #define DEF_O &mt RGUI O
 
 
-#define DEF_BSPC &kp BSPC
-#define DEF_SPC &mt LSHIFT SPC
-#define DEF_RET &kp RET
+#define DEF_SPCL &lht LSHIFT SPC
+#define DEF_SPCR &mt LSHIFT SPC
 
 // NAVIGATION LAYER
 #define L_NAV 1
@@ -171,11 +170,23 @@
 
 
 &mt {
-  //  flavor = "tap-preferred";
+  flavor = "tap-preferred";
   tapping_term_ms = <200>;
 };
 
 / {
+  behaviors {
+    lht: positional_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "POSITIONAL_HOLD_TAP";
+        #binding-cells = <2>;
+        flavor = "hold-preferred";
+        tapping-term-ms = <400>;
+        quick-tap-ms = <200>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <5>, <6>, <7>, <8>, <9>, <15>, <16>, <17>, <18>, <19>, <25>, <26>, <27>, <28>, <29>, <32>, <33>;
+    };
+  };
 
   keymap {
     compatible = "zmk,keymap";
@@ -185,7 +196,7 @@
         DEF_Q    DEF_W    DEF_F    DEF_P    DEF_B          DEF_J    DEF_L    DEF_U    DEF_Y    DEF_SEMI
         DEF_A    DEF_R    DEF_S    DEF_T    DEF_G          DEF_M    DEF_N    DEF_E    DEF_I    DEF_O
         DEF_Z    DEF_X    DEF_C    DEF_D    DEF_V          DEF_K    DEF_H    DEF_C    DEF_COMA DEF_DOT
-                                   DEF_BSPC DEF_SPC        DEF_SPC  DEF_RET
+                                   GEN_NONE DEF_SPCL       DEF_SPCR GEN_NONE
       >;
     };
 
@@ -194,7 +205,7 @@
         NAV_PRNT NAV_HOME NAV_UP   NAV_END  GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
         NAV_ESC  NAV_LEFT NAV_DOWN NAV_RGHT GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
         NAV_GRV  NAV_PGUP NAV_DEL  NAV_PGDN GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
-                                   NAV_TAB  GEN_TRAN       GEN_TRAN GEN_TRAN
+                                   GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
 
@@ -203,7 +214,7 @@
         GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_LBKT NUM_7    NUM_8    NUM_9    NUM_RBKT
         GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_EQUL NUM_4    NUM_5    NUM_6    NUM_BSLH
         GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_MIN  NUM_1    NUM_2    NUM_3    NUM_FSLH
-                                   GEN_TRAN GEN_TRAN       GEN_TRAN NUM_0
+                                   GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
 
@@ -230,7 +241,7 @@
         GAM_TAB  GAM_Q    GAM_W    GAM_E    GAM_R       GEN_NONE GEN_NONE GAM_UP   GEN_NONE GEN_NONE
         GAM_LSFT GAM_A    GAM_S    GAM_D    GAM_F       GAM_DEF  GAM_LEFT GAM_DOWN GAM_RGHT GEN_NONE
         GAM_LCTL GAM_Z    GAM_X    GAM_C    GAM_V       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
-                                   GAM_ESC  GAM_SPC     GEN_TRAN GEN_TRAN
+                                   GEN_TRAN GAM_SPC     GEN_TRAN GEN_TRAN
       >;
     };
 
