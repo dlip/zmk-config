@@ -60,23 +60,24 @@
 // NAVIGATION LAYER
 #define L_NAV 1
 
-#define NAV_PRNT &kp PSCRN
+#define NAV_BSLH &kp BSLH
 #define NAV_HOME &kp HOME
 #define NAV_UP &kp UP
 #define NAV_END &kp END
+#define NAV_PGUP &kp PG_UP
 
-#define NAV_ESC &kp ESC
+#define NAV_BSPC &kp BSPC
 #define NAV_LEFT &kp LEFT
 #define NAV_DOWN &kp DOWN
 #define NAV_RGHT &kp RIGHT
+#define NAV_TAB &kp TAB
 
 #define NAV_GRV &kp GRAVE
-#define NAV_PGUP &kp PG_UP
 #define NAV_DEL &kp DEL
+#define NAV_ESC &kp ESC
+#define NAV_RET &kp RET
 #define NAV_PGDN &kp PG_DN
 
-
-#define NAV_TAB &kp TAB
 
 // NUMBER LAYER
 #define L_NUM 2
@@ -91,16 +92,13 @@
 #define NUM_4 &kp N4
 #define NUM_5 &kp N5
 #define NUM_6 &kp N6
-#define NUM_BSLH &kp BSLH
+#define NUM_0 &kp BSLH
 
 #define NUM_MIN &kp MINUS
 #define NUM_1 &kp N1
 #define NUM_2 &kp N2
 #define NUM_3 &kp N3
 #define NUM_FSLH &kp FSLH
-
-
-#define NUM_0 &kp N0
 
 // MEDIA LAYER
 #define L_MED 3
@@ -109,6 +107,7 @@
 #define MED_VOLU &kp C_VOL_UP
 #define MED_BRIU &kp C_BRI_UP
 
+#define MED_PRNT &kp PSCRN
 #define MED_PREV &kp C_PREV
 #define MED_PLAY &kp K_PP
 #define MED_NEXT &kp C_NEXT
@@ -202,9 +201,9 @@
 
     navigation_layer {
       bindings = <
-        NAV_PRNT NAV_HOME NAV_UP   NAV_END  GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
-        NAV_ESC  NAV_LEFT NAV_DOWN NAV_RGHT GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
-        NAV_GRV  NAV_PGUP NAV_DEL  NAV_PGDN GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+        NAV_BSLH NAV_HOME NAV_UP   NAV_END  NAV_PGUP       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+        NAV_BSPC NAV_LEFT NAV_DOWN NAV_RGHT NAV_TAB        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+        NAV_GRV  NAV_DEL  NAV_ESC  NAV_RET  NAV_PGDN       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
@@ -212,7 +211,7 @@
     number_layer {
       bindings = <
         GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_LBKT NUM_7    NUM_8    NUM_9    NUM_RBKT
-        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_EQUL NUM_4    NUM_5    NUM_6    NUM_BSLH
+        GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_EQUL NUM_4    NUM_5    NUM_6    NUM_0
         GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE       NUM_MIN  NUM_1    NUM_2    NUM_3    NUM_FSLH
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
@@ -221,7 +220,7 @@
     media_layer {
       bindings = <
         GEN_NONE MED_BRID MED_VOLU MED_BRIU GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
-        GEN_NONE MED_PREV MED_PLAY MED_NEXT GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
+        MED_PRNT MED_PREV MED_PLAY MED_NEXT GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
         GEN_NONE MED_MUTE MED_VOLD MED_STOP GEN_NONE       GEN_NONE GEN_NONE GEN_NONE GEN_NONE GEN_NONE
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
