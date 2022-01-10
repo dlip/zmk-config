@@ -49,7 +49,7 @@
 
 #define DEF_M &kp M
 #define DEF_N &mt RCTL N 
-#define DEF_E &lt L_MED E
+#define DEF_E &lt L_NAV E
 #define DEF_I &mt LALT I 
 #define DEF_O &mt RGUI O
 
