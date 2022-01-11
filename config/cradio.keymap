@@ -91,7 +91,7 @@
 #define NUM_N4 &kp N4
 #define NUM_N5 &kp N5
 #define NUM_N6 &kp N6
-#define NUM_N0 &kp BSLH
+#define NUM_N0 &kp N0
 
 #define NUM_MIN &kp MINUS
 #define NUM_N1 &kp N1
