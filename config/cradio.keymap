@@ -43,9 +43,9 @@
 
 #define DEF_K &kp K
 #define DEF_H &kp H
-#define DEF_C &kp C
 #define DEF_COMA &kp COMMA
 #define DEF_DOT &kp DOT
+#define DEF_QUOT &kp SQT
 
 #define DEF_M &kp M
 #define DEF_N &mt RCTL N 
@@ -185,7 +185,7 @@
         tapping-term-ms = <400>;
         quick-tap-ms = <200>;
         bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <5>, <6>, <7>, <8>, <9>, <15>, <16>, <17>, <18>, <19>, <25>, <26>, <27>, <28>, <29>, <32>, <33>;
+        hold-trigger-key-positions = <2>, <5>, <6>, <7>, <8>, <9>, <12> <15>, <16>, <17>, <18>, <19>, <25>, <26>, <27>, <28>, <29>, <32>, <33>;
     };
   };
 
@@ -196,7 +196,7 @@
       bindings = <
         DEF_Q    DEF_W    DEF_F    DEF_P    DEF_B          DEF_J    DEF_L    DEF_U    DEF_Y    DEF_SEMI
         DEF_A    DEF_R    DEF_S    DEF_T    DEF_G          DEF_M    DEF_N    DEF_E    DEF_I    DEF_O
-        DEF_Z    DEF_X    DEF_C    DEF_D    DEF_V          DEF_K    DEF_H    DEF_C    DEF_COMA DEF_DOT
+        DEF_Z    DEF_X    DEF_C    DEF_D    DEF_V          DEF_K    DEF_H    DEF_COMA DEF_DOT  DEF_QUOT
                                    GEN_NONE DEF_SPCL       DEF_SPCR GEN_NONE
       >;
     };
