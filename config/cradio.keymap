@@ -81,6 +81,8 @@
 // NUMBER LAYER
 #define L_NUM 2
 
+#define NUM_BCLR &bt BT_CLR
+
 #define NUM_LBKT &kp LBKT
 #define NUM_N7 &kp N7 
 #define NUM_N8 &kp N8
@@ -216,7 +218,7 @@
 
     number_layer {
       bindings = <
-        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_LBKT NUM_N7    NUM_N8    NUM_N9    NUM_RBKT
+        NUM_BCLR GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_LBKT NUM_N7    NUM_N8    NUM_N9    NUM_RBKT
         GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_EQUL NUM_N4    NUM_N5    NUM_N6    NUM_N0
         GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_MIN  NUM_N1    NUM_N2    NUM_N3    NUM_FSLH
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
