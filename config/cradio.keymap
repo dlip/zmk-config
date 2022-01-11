@@ -24,7 +24,7 @@
                         
 #define DEF_A &lht LGUI A 
 #define DEF_R &lht LALT R 
-#define DEF_S &lht (&mo L_NUM) S
+#define DEF_S &lt L_NUM S
 #define DEF_T &lht LCTRL T 
 #define DEF_G &kp G
         
