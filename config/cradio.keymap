@@ -31,7 +31,7 @@
 #define DEF_Z &mt LC(Z) Z
 #define DEF_X &mt LC(X) X
 #define DEF_C &mt LC(C) C
-#define DEF_D &mt LC(D) V
+#define DEF_D &mt LC(V) D
 #define DEF_V &kp V
                         
 
