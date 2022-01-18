@@ -18,13 +18,13 @@
 
 #define DEF_Q &kp Q
 #define DEF_W &kp W
-#define DEF_F &kp F
+#define DEF_F &lt L_FUN F
 #define DEF_P &kp P
 #define DEF_B &kp B
                         
 #define DEF_A &mt LGUI A 
 #define DEF_R &mt LALT R 
-#define DEF_S &mt L_SHIFT S
+#define DEF_S &lt L_NUM S
 #define DEF_T &mt LCTRL T 
 #define DEF_G &kp G
         
@@ -37,9 +37,9 @@
 
 #define DEF_J &kp J
 #define DEF_L &kp L
-#define DEF_U &kp U
+#define DEF_U &lt L_MED U
 #define DEF_Y &kp Y
-#define DEF_ESC &kp ESC
+#define DEF_SEMI &kp SEMI
 
 #define DEF_K &kp K
 #define DEF_H &kp H
@@ -49,16 +49,12 @@
 
 #define DEF_M &kp M
 #define DEF_N &mt RCTL N 
-#define DEF_E &mt R_SHIFT E
+#define DEF_E &lt L_NAV E
 #define DEF_I &mt LALT I 
 #define DEF_O &mt RGUI O
 
 
-#define DEF_TAB &lt L_FUN TAB
-#define DEF_SPC &lt L_NUM SPC
-
-#define DEF_BSPC &lt L_NAV BSPC
-#define DEF_RET &lt L_MED RET
+#define DEF_SPC &mt LSHIFT SPC
 
 // NAVIGATION LAYER
 #define L_NAV 1
@@ -208,10 +204,10 @@
 
     default_layer {
       bindings = <
-        DEF_Q    DEF_W    DEF_F    DEF_P    DEF_B          DEF_J    DEF_L    DEF_U    DEF_Y    DEF_ESC
+        DEF_Q    DEF_W    DEF_F    DEF_P    DEF_B          DEF_J    DEF_L    DEF_U    DEF_Y    DEF_SEMI
         DEF_A    DEF_R    DEF_S    DEF_T    DEF_G          DEF_M    DEF_N    DEF_E    DEF_I    DEF_O
         DEF_Z    DEF_X    DEF_C    DEF_D    DEF_V          DEF_K    DEF_H    DEF_COMA DEF_DOT  DEF_QUOT
-                                   DEF_TAB  DEF_SPC        DEF_BSPC DEF_RET
+                                   GEN_NONE DEF_SPC        DEF_SPC  GEN_NONE
       >;
     };
 
