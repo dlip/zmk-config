@@ -63,23 +63,21 @@
 // NAVIGATION LAYER
 #define L_NAV 1
 
-#define NAV_BSLH &kp BSLH
+#define NAV_PRNT &kp PSCRN
 #define NAV_HOME &kp HOME
 #define NAV_UP &kp UP
 #define NAV_END &kp END
 #define NAV_PGUP &kp PG_UP
 
-#define NAV_BSPC &kp BSPC
+#define NAV_GRV &kp GRAVE
 #define NAV_LEFT &kp LEFT
 #define NAV_DOWN &kp DOWN
 #define NAV_RGHT &kp RIGHT
-#define NAV_TAB &kp TAB
-
-#define NAV_GRV &kp GRAVE
-#define NAV_DEL &kp DEL
-#define NAV_ESC &kp ESC
-#define NAV_RET &kp RET
 #define NAV_PGDN &kp PG_DN
+
+#define NAV_DEL &kp DEL
+#define NAV_LBKT &kp LBKT
+#define NAV_RBKT &kp RBKT 
 
 
 // NUMBER LAYER
@@ -89,11 +87,11 @@
 #define NUM_BNXT &bt BT_NXT
 #define NUM_BPRV &bt BT_PRV
 
-#define NUM_LBKT &kp LBKT
+#define NUM_BSLH &kp BSLH
 #define NUM_N7 &kp N7 
 #define NUM_N8 &kp N8
 #define NUM_N9 &kp N9
-#define NUM_RBKT &kp RBKT 
+#define NUM_SEMI &kp SEMI
 
 #define NUM_BOOT &bootloader
 
@@ -127,7 +125,6 @@
 // FUNCTION LAYER
 #define L_FUN 4
 
-#define FUN_RES &reset
 #define FUN_F7 &kp F7
 #define FUN_F8 &kp F8
 #define FUN_F9 &kp F9
@@ -139,7 +136,6 @@
 #define FUN_F6 &kp F6
 #define FUN_F11 &kp F11
 
-#define FUN_BOOT &bootloader
 #define FUN_F1 &kp F1
 #define FUN_F2 &kp F2
 #define FUN_F3 &kp F3
@@ -216,16 +212,16 @@
 
     navigation_layer {
       bindings = <
-        NAV_BSLH NAV_HOME NAV_UP   NAV_END  NAV_PGUP       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
-        NAV_BSPC NAV_LEFT NAV_DOWN NAV_RGHT NAV_TAB        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
-        NAV_GRV  NAV_DEL  NAV_ESC  NAV_RET  NAV_PGDN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        NAV_PRNT NAV_HOME NAV_UP   NAV_END  NAV_PGUP       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        NAV_GRV  NAV_LEFT NAV_DOWN NAV_RGHT NAV_TAB        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        GEN_TRAN NAV_DEL  NAV_LBKT NAV_RBKT NAV_PGDN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
 
     number_layer {
       bindings = <
-        NUM_BCLR NUM_BPRV GEN_TRAN NUM_BNXT GEN_TRAN       NUM_LBKT NUM_N7    NUM_N8    NUM_N9    NUM_RBKT
+        NUM_BCLR GEN_TRAN NUM_BPRV NUM_BNXT GEN_TRAN       NUM_BSLH NUM_N7    NUM_N8    NUM_N9    NUM_SEMI
         GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_EQUL NUM_N4    NUM_N5    NUM_N6    NUM_N0
         NUM_BOOT GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_MIN  NUM_N1    NUM_N2    NUM_N3    NUM_FSLH
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
@@ -243,9 +239,9 @@
 
     function_layer {
       bindings = <
-        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       FUN_RES  FUN_F7   FUN_F8   FUN_F9   FUN_F10
+        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       GEN_TRAN FUN_F7   FUN_F8   FUN_F9   FUN_F10
         GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       FUN_GAME FUN_F4   FUN_F5   FUN_F6   FUN_F11
-        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       FUN_BOOT FUN_F1   FUN_F2   FUN_F3   FUN_F13
+        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       GEN_TRAN FUN_F1   FUN_F2   FUN_F3   FUN_F13
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
