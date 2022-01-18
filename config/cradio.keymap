@@ -24,7 +24,7 @@
                         
 #define DEF_A &mt LGUI A 
 #define DEF_R &mt LALT R 
-#define DEF_S &mt L_SHIFT S
+#define DEF_S &mt LSHIFT S
 #define DEF_T &mt LCTRL T 
 #define DEF_G &kp G
         
@@ -49,7 +49,7 @@
 
 #define DEF_M &kp M
 #define DEF_N &mt RCTL N 
-#define DEF_E &mt R_SHIFT E
+#define DEF_E &mt RSHIFT E
 #define DEF_I &mt LALT I 
 #define DEF_O &mt RGUI O
 
@@ -116,7 +116,6 @@
 #define MED_VOLU &kp C_VOL_UP
 #define MED_BRIU &kp C_BRI_UP
 
-#define MED_PRNT &kp PSCRN
 #define MED_PREV &kp C_PREV
 #define MED_PLAY &kp K_PP
 #define MED_NEXT &kp C_NEXT
@@ -236,7 +235,7 @@
     media_layer {
       bindings = <
         GEN_TRAN MED_BRID MED_VOLU MED_BRIU GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
-        MED_PRNT MED_PREV MED_PLAY MED_NEXT GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        GEN_TRAN MED_PREV MED_PLAY MED_NEXT GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
         GEN_TRAN MED_MUTE MED_VOLD MED_STOP GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
