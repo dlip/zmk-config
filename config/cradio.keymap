@@ -69,13 +69,13 @@
 #define NAV_END &kp END
 #define NAV_PGUP &kp PG_UP
 
-#define NAV_GRV &kp GRAVE
+#define NAV_DEL &kp DEL
 #define NAV_LEFT &kp LEFT
 #define NAV_DOWN &kp DOWN
 #define NAV_RGHT &kp RIGHT
 #define NAV_PGDN &kp PG_DN
 
-#define NAV_DEL &kp DEL
+#define NAV_GRV &kp GRAVE
 #define NAV_LBKT &kp LBKT
 #define NAV_RBKT &kp RBKT 
 
@@ -213,8 +213,8 @@
     navigation_layer {
       bindings = <
         NAV_PRNT NAV_HOME NAV_UP   NAV_END  NAV_PGUP       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
-        NAV_GRV  NAV_LEFT NAV_DOWN NAV_RGHT NAV_TAB        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
-        GEN_TRAN NAV_DEL  NAV_LBKT NAV_RBKT NAV_PGDN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        NAV_DEL  NAV_LEFT NAV_DOWN NAV_RGHT NAV_PGDN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        GEN_TRAN NAV_GRV  NAV_LBKT NAV_RBKT GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
