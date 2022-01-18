@@ -186,7 +186,7 @@
 
 / {
   behaviors {
-    lht: positional_hold_tap {
+    lht: left_hand_positional_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         label = "POSITIONAL_HOLD_TAP";
         #binding-cells = <2>;
@@ -196,7 +196,7 @@
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33>;
     };
-    rht: positional_hold_tap {
+    rht: right_hand_positional_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         label = "POSITIONAL_HOLD_TAP";
         #binding-cells = <2>;
