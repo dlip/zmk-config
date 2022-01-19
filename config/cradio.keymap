@@ -185,6 +185,15 @@
 };
 
 / {
+  combos {
+      compatible = "zmk,combos";
+      combo_esc {
+          timeout-ms = <50>;
+          key-positions = <0 1>;
+          bindings = <&kp ESC>;
+      };
+  };
+
   behaviors {
     lht: left_hand_positional_hold_tap {
         compatible = "zmk,behavior-hold-tap";
