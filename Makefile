@@ -8,14 +8,23 @@ SIDE =
 
 BUILD_SCRIPT = source $(ZEPHYR_DIR)/zephyr-env.sh; west build -p -s $(ZMK_DIR)/app -b $(BOARD) -d build/shield$${SIDE} -- -DSHIELD=$(SHIELD)$${SIDE} -DKEYMAP=$(KEYMAP) -DZMK_CONFIG=$(CONFIG_DIR)
 
+CP_SCRIPT = cp build/shield$${SIDE}/zephyr/zmk.uf2 /run/media/dane/NICENANO/
+
+flash:
+	make left && echo 'press enter then reset' && read && sleep 5 && make cp_left
+
 left:
 	SIDE=_left; $(BUILD_SCRIPT)
 
 cp_left:
-	cp build/shield_left/zephyr/zmk.uf2 /run/media/dane/NICENANO/
+	SIDE=_left; $(CP_SCRIPT)
 
 right:
 	SIDE=_right; $(BUILD_SCRIPT)
 
 cp_right:
-	cp build/shield_left/zephyr/zmk.uf2 /run/media/dane/NICENANO/
+	SIDE=_right; $(CP_SCRIPT)
+
+update:
+	west update
+	west zephyr-export

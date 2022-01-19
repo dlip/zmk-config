@@ -187,11 +187,57 @@
 / {
   combos {
       compatible = "zmk,combos";
+      combo_lbkt {
+          timeout-ms = <50>;
+          key-positions = <6 16>;
+          bindings = <&kp LBKT>;
+      };
+      combo_rbkt {
+          timeout-ms = <50>;
+          key-positions = <7 17>;
+          bindings = <&kp RBKT>;
+      };
+      combo_lbrc {
+          timeout-ms = <50>;
+          key-positions = <16 26>;
+          bindings = <&kp LBRC>;
+      };
+      combo_rbrc {
+          timeout-ms = <50>;
+          key-positions = <17 27>;
+          bindings = <&kp RBRC>;
+      };
+      combo_grave {
+          timeout-ms = <50>;
+          key-positions = <5 15>;
+          bindings = <&kp GRAVE>;
+      };
+      combo_tilde {
+          timeout-ms = <50>;
+          key-positions = <15 25>;
+          bindings = <&kp TILDE>;
+      };
       combo_esc {
           timeout-ms = <50>;
-          key-positions = <0 1>;
+          key-positions = <2 12>;
           bindings = <&kp ESC>;
       };
+      combo_ret {
+          timeout-ms = <50>;
+          key-positions = <3 13>;
+          bindings = <&kp RET>;
+      };
+      combo_copy {
+          timeout-ms = <50>;
+          key-positions = <12 22>;
+          bindings = <&kp LC(C)>;
+      };
+      combo_paste {
+          timeout-ms = <50>;
+          key-positions = <13 23>;
+          bindings = <&kp LC(V)>;
+      };
+
   };
 
   behaviors {
