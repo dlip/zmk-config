@@ -11,5 +11,11 @@ BUILD_SCRIPT = source $(ZEPHYR_DIR)/zephyr-env.sh; west build -p -s $(ZMK_DIR)/a
 left:
 	SIDE=_left; $(BUILD_SCRIPT)
 
+cp_left:
+	cp build/shield_left/zephyr/zmk.uf2 /run/media/dane/NICENANO/
+
 right:
 	SIDE=_right; $(BUILD_SCRIPT)
+
+cp_right:
+	cp build/shield_left/zephyr/zmk.uf2 /run/media/dane/NICENANO/
