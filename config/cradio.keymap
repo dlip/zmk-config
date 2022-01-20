@@ -18,13 +18,13 @@
 
 #define DEF_Q &kp Q
 #define DEF_W &kp W
-#define DEF_F &kp F
+#define DEF_F &lt L_FUN F
 #define DEF_P &kp P
 #define DEF_B &kp B
                         
 #define DEF_A &lht LGUI A 
 #define DEF_R &lht LALT R 
-#define DEF_S &lht LSHIFT S
+#define DEF_S &lt L_NUM S
 #define DEF_T &lht LCTRL T 
 #define DEF_G &kp G
         
@@ -37,9 +37,9 @@
 
 #define DEF_J &kp J
 #define DEF_L &kp L
-#define DEF_U &kp U
+#define DEF_U &lt L_MED U
 #define DEF_Y &kp Y
-#define DEF_ESC &kp ESC
+#define DEF_SEMI &kp SEMI
 
 #define DEF_K &kp K
 #define DEF_H &kp H
@@ -49,35 +49,33 @@
 
 #define DEF_M &kp M
 #define DEF_N &rht RCTL N 
-#define DEF_E &rht RSHIFT E
+#define DEF_E &lt L_NAV E
 #define DEF_I &rht LALT I 
 #define DEF_O &rht RGUI O
 
 
-#define DEF_TAB &lt L_FUN TAB
-#define DEF_SPC &lt L_NUM SPC
-
-#define DEF_BSPC &lt L_NAV BSPC
-#define DEF_RET &lt L_MED RET
+#define DEF_SPC &mt LSHIFT SPC
 
 // NAVIGATION LAYER
 #define L_NAV 1
 
-#define NAV_PRNT &kp PSCRN
+#define NAV_BSLH &kp BSLH
 #define NAV_HOME &kp HOME
 #define NAV_UP &kp UP
 #define NAV_END &kp END
 #define NAV_PGUP &kp PG_UP
 
-#define NAV_DEL &kp DEL
+#define NAV_BSPC &kp BSPC
 #define NAV_LEFT &kp LEFT
 #define NAV_DOWN &kp DOWN
 #define NAV_RGHT &kp RIGHT
-#define NAV_PGDN &kp PG_DN
+#define NAV_TAB &kp TAB
 
 #define NAV_GRV &kp GRAVE
-#define NAV_LBKT &kp LBKT
-#define NAV_RBKT &kp RBKT 
+#define NAV_DEL &kp DEL
+#define NAV_ESC &kp ESC
+#define NAV_RET &kp RET
+#define NAV_PGDN &kp PG_DN
 
 
 // NUMBER LAYER
@@ -87,11 +85,11 @@
 #define NUM_BNXT &bt BT_NXT
 #define NUM_BPRV &bt BT_PRV
 
-#define NUM_BSLH &kp BSLH
+#define NUM_LBKT &kp LBKT
 #define NUM_N7 &kp N7 
 #define NUM_N8 &kp N8
 #define NUM_N9 &kp N9
-#define NUM_SEMI &kp SEMI
+#define NUM_RBKT &kp RBKT 
 
 #define NUM_BOOT &bootloader
 
@@ -114,6 +112,7 @@
 #define MED_VOLU &kp C_VOL_UP
 #define MED_BRIU &kp C_BRI_UP
 
+#define MED_PRNT &kp PSCRN
 #define MED_PREV &kp C_PREV
 #define MED_PLAY &kp K_PP
 #define MED_NEXT &kp C_NEXT
@@ -125,6 +124,7 @@
 // FUNCTION LAYER
 #define L_FUN 4
 
+#define FUN_RES &reset
 #define FUN_F7 &kp F7
 #define FUN_F8 &kp F8
 #define FUN_F9 &kp F9
@@ -136,6 +136,7 @@
 #define FUN_F6 &kp F6
 #define FUN_F11 &kp F11
 
+#define FUN_BOOT &bootloader
 #define FUN_F1 &kp F1
 #define FUN_F2 &kp F2
 #define FUN_F3 &kp F3
@@ -185,81 +186,36 @@
 };
 
 / {
-  combos {
-      compatible = "zmk,combos";
-      combo_lbkt {
-          timeout-ms = <50>;
-          key-positions = <6 16>;
-          bindings = <&kp LBKT>;
-      };
-      combo_rbkt {
-          timeout-ms = <50>;
-          key-positions = <7 17>;
-          bindings = <&kp RBKT>;
-      };
-      combo_lbrc {
-          timeout-ms = <50>;
-          key-positions = <16 26>;
-          bindings = <&kp LBRC>;
-      };
-      combo_rbrc {
-          timeout-ms = <50>;
-          key-positions = <17 27>;
-          bindings = <&kp RBRC>;
-      };
-      combo_grave {
-          timeout-ms = <50>;
-          key-positions = <5 15>;
-          bindings = <&kp GRAVE>;
-      };
-      combo_tilde {
-          timeout-ms = <50>;
-          key-positions = <15 25>;
-          bindings = <&kp TILDE>;
-      };
-      combo_esc {
-          timeout-ms = <50>;
-          key-positions = <2 12>;
-          bindings = <&kp ESC>;
-      };
-      combo_ret {
-          timeout-ms = <50>;
-          key-positions = <3 13>;
-          bindings = <&kp RET>;
-      };
-      combo_copy {
-          timeout-ms = <50>;
-          key-positions = <12 22>;
-          bindings = <&kp LC(C)>;
-      };
-      combo_paste {
-          timeout-ms = <50>;
-          key-positions = <13 23>;
-          bindings = <&kp LC(V)>;
-      };
-
-  };
-
   behaviors {
     lht: left_hand_positional_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         label = "LEFT_POSITIONAL_HOLD_TAP";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;    // <---[[moderate duration]]
+        tapping-term-ms = <200>; 
         quick-tap-ms = <0>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <2 5 6 7 8 9 12 15 16 17 18 19 25 26 27 28 29 30 31 32 33>;
+    };
+    lhlt: left_hand_positional_hold_layer_tap {
+        compatible = "zmk,behavior-hold-layer-tap";
+        label = "LEFT_POSITIONAL_HOLD_LAYER_TAP";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <0>;
+        flavor = "balanced";
+        bindings = <&mo>, <&kp>; // ERROR: LACKS BINDING
         hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33>;
     };
     rht: right_hand_positional_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         label = "RIGHT_POSITIONAL_HOLD_TAP";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;    // <---[[moderate duration]]
+        tapping-term-ms = <200>;
         quick-tap-ms = <0>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
+        hold-trigger-key-positions = <0 1 2 3 4 7 10 11 12 13 14 17 20 21 22 23 24 30 31 32 33>;
     };
   };
 
@@ -268,25 +224,25 @@
 
     default_layer {
       bindings = <
-        DEF_Q    DEF_W    DEF_F    DEF_P    DEF_B          DEF_J    DEF_L    DEF_U    DEF_Y    DEF_ESC
+        DEF_Q    DEF_W    DEF_F    DEF_P    DEF_B          DEF_J    DEF_L    DEF_U    DEF_Y    DEF_SEMI
         DEF_A    DEF_R    DEF_S    DEF_T    DEF_G          DEF_M    DEF_N    DEF_E    DEF_I    DEF_O
         DEF_Z    DEF_X    DEF_C    DEF_D    DEF_V          DEF_K    DEF_H    DEF_COMA DEF_DOT  DEF_QUOT
-                                   DEF_TAB  DEF_SPC        DEF_BSPC DEF_RET
+                                   GEN_NONE DEF_SPC        DEF_SPC  GEN_NONE
       >;
     };
 
     navigation_layer {
       bindings = <
-        NAV_PRNT NAV_HOME NAV_UP   NAV_END  NAV_PGUP       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
-        NAV_DEL  NAV_LEFT NAV_DOWN NAV_RGHT NAV_PGDN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
-        GEN_TRAN NAV_GRV  NAV_LBKT NAV_RBKT GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        NAV_BSLH NAV_HOME NAV_UP   NAV_END  NAV_PGUP       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        NAV_BSPC NAV_LEFT NAV_DOWN NAV_RGHT NAV_TAB        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        NAV_GRV  NAV_DEL  NAV_ESC  NAV_RET  NAV_PGDN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
 
     number_layer {
       bindings = <
-        NUM_BCLR GEN_TRAN NUM_BPRV NUM_BNXT GEN_TRAN       NUM_BSLH NUM_N7    NUM_N8    NUM_N9    NUM_SEMI
+        NUM_BCLR NUM_BPRV GEN_TRAN NUM_BNXT GEN_TRAN       NUM_LBKT NUM_N7    NUM_N8    NUM_N9    NUM_RBKT
         GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_EQUL NUM_N4    NUM_N5    NUM_N6    NUM_N0
         NUM_BOOT GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_MIN  NUM_N1    NUM_N2    NUM_N3    NUM_FSLH
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
@@ -296,7 +252,7 @@
     media_layer {
       bindings = <
         GEN_TRAN MED_BRID MED_VOLU MED_BRIU GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
-        GEN_TRAN MED_PREV MED_PLAY MED_NEXT GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        MED_PRNT MED_PREV MED_PLAY MED_NEXT GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
         GEN_TRAN MED_MUTE MED_VOLD MED_STOP GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
@@ -304,9 +260,9 @@
 
     function_layer {
       bindings = <
-        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       GEN_TRAN FUN_F7   FUN_F8   FUN_F9   FUN_F10
+        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       FUN_RES  FUN_F7   FUN_F8   FUN_F9   FUN_F10
         GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       FUN_GAME FUN_F4   FUN_F5   FUN_F6   FUN_F11
-        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       GEN_TRAN FUN_F1   FUN_F2   FUN_F3   FUN_F13
+        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       FUN_BOOT FUN_F1   FUN_F2   FUN_F3   FUN_F13
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };

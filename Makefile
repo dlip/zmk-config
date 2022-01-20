@@ -25,6 +25,9 @@ right:
 cp_right:
 	SIDE=_right; $(CP_SCRIPT)
 
+init:
+	west init -l config
+
 update:
 	west update
 	west zephyr-export
