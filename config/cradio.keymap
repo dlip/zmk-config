@@ -48,65 +48,63 @@
 #define DEF_QUOT &kp SQT
 
 #define DEF_M &kp M
-#define DEF_N &rht RCTL N 
+#define DEF_N &rht RCTL N
 #define DEF_E &rht RSHIFT E
 #define DEF_I &rht LALT I 
 #define DEF_O &rht RGUI O
 
 
-#define DEF_MED &mo L_MED
-#define DEF_SPC &lt L_NNM SPC
-#define DEF_FUN &mo L_FUN
+#define DEF_TAB &lt L_FUN TAB
+#define DEF_SPC &lt L_NUM SPC
+#define DEF_BSPC &lt L_NAV BSPC
+#define DEF_RET &lt L_MED RET
 
-// NAVIGATION / NUMBER LAYER
-#define L_NNM 1
+// NAVIGATION LAYER
+#define L_NAV 1
 
-// Left
+#define NAV_HOME &kp HOME
+#define NAV_UP &kp UP
+#define NAV_END &kp END
+#define NAV_PGUP &kp PG_UP
 
-#define NNM_BSLH &kp BSLH
-#define NNM_HOME &kp HOME
-#define NNM_UP &kp UP
-#define NNM_END &kp END
-#define NNM_PGUP &kp PG_UP
+#define NAV_ESC &kp ESC
+#define NAV_LEFT &kp LEFT
+#define NAV_DOWN &kp DOWN
+#define NAV_RGHT &kp RIGHT
+#define NAV_PGDN &kp PG_DN
 
-#define NNM_BSPC &lht LGUI BSPC
-#define NNM_LEFT &lht LALT LEFT
-#define NNM_DOWN &lht LSHIFT DOWN
-#define NNM_RGHT &lht LCTRL RIGHT
-#define NNM_TAB &kp TAB
+#define NAV_DEL &kp DEL
+#define NAV_BSLH &kp BSLH
+#define NAV_GRV &kp GRAVE
 
-#define NNM_GRV &kp GRAVE
-#define NNM_DEL &kp DEL
-#define NNM_ESC &kp ESC
-#define NNM_RET &kp RET
-#define NNM_PGDN &kp PG_DN
+// NUMBER LAYER
+#define L_NUM 2
 
-// Right
+#define NUM_LBKT &kp LBKT
+#define NUM_N7 &kp N7 
+#define NUM_N8 &kp N8
+#define NUM_N9 &kp N9
+#define NUM_RBKT &kp RBKT 
 
-#define NNM_LBKT &kp LBKT
-#define NNM_N7 &kp N7 
-#define NNM_N8 &kp N8
-#define NNM_N9 &kp N9
-#define NNM_RBKT &kp RBKT 
+#define NUM_EQUL &kp EQUAL
+#define NUM_N4 &rht RCTL N4
+#define NUM_N5 &rht RSHIFT N5
+#define NUM_N6 &rht LALT N6
+#define NUM_N0 &rht RGUI N0
 
-#define NNM_EQUL &kp EQUAL
-#define NNM_N4 &rht RCTL N4
-#define NNM_N5 &rht RSHIFT N5
-#define NNM_N6 &rht LALT N6
-#define NNM_N0 &rht RGUI N0
-
-#define NNM_MIN &kp MINUS
-#define NNM_N1 &kp N1
-#define NNM_N2 &kp N2
-#define NNM_N3 &kp N3
-#define NNM_FSLH &kp FSLH
+#define NUM_MIN &kp MINUS
+#define NUM_N1 &kp N1
+#define NUM_N2 &kp N2
+#define NUM_N3 &kp N3
+#define NUM_FSLH &kp FSLH
 
 // MEDIA LAYER
-#define L_MED 2
+#define L_MED 3
 
 #define MED_BRID &kp C_BRI_DN
 #define MED_VOLU &kp C_VOL_UP
 #define MED_BRIU &kp C_BRI_UP
+
 
 #define MED_PRNT &kp PSCRN
 #define MED_PREV &kp C_PREV
@@ -118,7 +116,7 @@
 #define MED_STOP &kp C_STOP
 
 // FUNCTION LAYER
-#define L_FUN 3
+#define L_FUN 4
 
 #define FUN_BCLR &bt BT_CLR
 #define FUN_F7 &kp F7
@@ -139,7 +137,7 @@
 #define FUN_F13 &kp F12
 
 // GAMING LAYER
-#define L_GAM 4
+#define L_GAM 5
 
 #define GAM_TAB &kp TAB
 #define GAM_Q &kp Q
@@ -213,19 +211,27 @@
         DEF_Q    DEF_W    DEF_F    DEF_P    DEF_B          DEF_J    DEF_L    DEF_U    DEF_Y    DEF_SEMI
         DEF_A    DEF_R    DEF_S    DEF_T    DEF_G          DEF_M    DEF_N    DEF_E    DEF_I    DEF_O
         DEF_Z    DEF_X    DEF_C    DEF_D    DEF_V          DEF_K    DEF_H    DEF_COMA DEF_DOT  DEF_QUOT
-                                   DEF_FUN  DEF_SPC        DEF_SPC  DEF_MED
+                                   DEF_TAB  DEF_SPC        DEF_BSPC DEF_RET
+      >;
+    };
+
+    navigation_layer {
+      bindings = <
+        GEN_TRAN NAV_HOME NAV_UP   NAV_END  NAV_PGUP       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        NAV_ESC  NAV_LEFT NAV_DOWN NAV_RGHT NAV_PGDN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        GEN_TRAN NAV_DEL  NAV_BSLH NAV_GRV  GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+                                   GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
 
     nav_num_layer {
       bindings = <
-        NNM_BSLH NNM_HOME NNM_UP   NNM_END  NNM_PGUP       NNM_LBKT NNM_N7    NNM_N8    NNM_N9    NNM_RBKT
-        NNM_BSPC NNM_LEFT NNM_DOWN NNM_RGHT NNM_TAB        NNM_EQUL NNM_N4    NNM_N5    NNM_N6    NNM_N0
-        NNM_GRV  NNM_DEL  NNM_ESC  NNM_RET  NNM_PGDN       NNM_MIN  NNM_N1    NNM_N2    NNM_N3    NNM_FSLH
+        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_LBKT NUM_N7    NUM_N8    NUM_N9    NUM_RBKT
+        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_EQUL NUM_N4    NUM_N5    NUM_N6    NUM_N0
+        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_MIN  NUM_N1    NUM_N2    NUM_N3    NUM_FSLH
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
-
     media_layer {
       bindings = <
         GEN_TRAN MED_BRID MED_VOLU MED_BRIU GEN_TRAN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
