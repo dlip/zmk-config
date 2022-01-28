@@ -58,7 +58,7 @@
 // NAVIGATION LAYER
 #define L_NAV 1
 
-#define NAV_BSLH &kp BSLH
+#define NAV_GRV &kp GRAVE
 #define NAV_HOME &kp HOME
 #define NAV_UP &kp UP
 #define NAV_END &kp END
@@ -70,7 +70,7 @@
 #define NAV_RGHT &kp RIGHT
 #define NAV_TAB &kp TAB
 
-#define NAV_GRV &kp GRAVE
+#define NAV_BSLH &kp BSLH
 #define NAV_DEL &kp DEL
 #define NAV_ESC &kp ESC
 #define NAV_RET &kp RET
@@ -194,9 +194,9 @@
 
     navigation_layer {
       bindings = <
-        NAV_BSLH NAV_HOME NAV_UP   NAV_END  NAV_PGUP       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        NAV_GRV  NAV_HOME NAV_UP   NAV_END  NAV_PGUP       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
         NAV_BSPC NAV_LEFT NAV_DOWN NAV_RGHT NAV_TAB        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
-        NAV_GRV  NAV_DEL  NAV_ESC  NAV_RET  NAV_PGDN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
+        NAV_BSLH NAV_DEL  NAV_ESC  NAV_RET  NAV_PGDN       GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN
       >;
     };
