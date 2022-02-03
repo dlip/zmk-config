@@ -28,10 +28,10 @@
 #define DEF_T &mt LCTRL T 
 #define DEF_G &kp G
         
-#define DEF_Z &mt LC(Z) Z
-#define DEF_X &mt LC(X) X
-#define DEF_C &mt LC(C) C
-#define DEF_D &mt LC(V) D
+#define DEF_Z &kp Z
+#define DEF_X &kp X
+#define DEF_C &kp C
+#define DEF_D &kp D
 #define DEF_V &kp V
                         
 
