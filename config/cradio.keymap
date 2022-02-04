@@ -170,12 +170,12 @@
 
 &mt {
   flavor = "tap-preferred";
-  tapping_term_ms = <180>;
+  tapping_term_ms = <170>;
 };
 
 &lt {
   flavor = "tap-preferred";
-  tapping_term_ms = <180>;
+  tapping_term_ms = <170>;
 };
 
 / {
@@ -227,9 +227,9 @@
       >;
     };
 
-    nav_num_layer {
+    number_layer {
       bindings = <
-        GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_LBKT NUM_N7    NUM_N8    NUM_N9    NUM_RBKT
+        FUN_BOOT GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_LBKT NUM_N7    NUM_N8    NUM_N9    NUM_RBKT
         GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN NAV_TAB        NUM_EQUL NUM_N4    NUM_N5    NUM_N6    NUM_N0
         GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN GEN_TRAN       NUM_MIN  NUM_N1    NUM_N2    NUM_N3    NUM_FSLH
                                    GEN_TRAN GEN_TRAN       GEN_TRAN GEN_TRAN

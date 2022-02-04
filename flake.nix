@@ -71,6 +71,7 @@
             runtimeInputs = buildInputs;
             checkPhase = "";
             text = ''
+              set -euo pipefail
               source ${zephyrDir}/zephyr-env.sh
               west build -p -s ${zmkDir}/app -b ${board} -d build/shield_${side} -- -DSHIELD=${shield}_${side} -DKEYMAP=${keymap} -DZMK_CONFIG=${configDir}
               echo 'press enter then reset'
@@ -78,6 +79,7 @@
               sleep 5
               echo 'copying firmware'
               cp build/shield_${side}/zephyr/zmk.uf2 /run/media/dane/NICENANO/
+              echo 'done'
             '';
           };
         buildright = pkgs.writeShellScriptBin "buildright" ''
